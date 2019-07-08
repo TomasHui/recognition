@@ -1,2 +1,2 @@
 # recognition
-a demo for deep learning web system
+a demo for a web system
