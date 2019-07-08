@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="TestTables">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/aaaa?serverTimezone=GMT%2B8" userId="root" password="root"/>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+        <!--java模型对象生成器,用来生成含有主键key的类，记录类 以及查询Example类 targetPackage 指定生成的model生成所在的包名
+            targetProject 指定在该项目下所在的路径 -->
+        <javaModelGenerator targetPackage="com.zhouwj.recognition.entity" targetProject="src/main/java"/>
+        <!--sql Mapper XML 生成器-->
+        <sqlMapGenerator targetPackage="mybatis.mappers" targetProject="src/main/resources"/>
+        <!--sql Mapper Java接口-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.zhouwj.recognition.mapper"  targetProject="src/main/java/">
+            <property name="enableSubPackages" value="false" />
+        </javaClientGenerator>
+        <table tableName="netuser" domainObjectName="NetUser"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"
+               enableDeleteByPrimaryKey="false"></table>
+    </context>
+</generatorConfiguration>

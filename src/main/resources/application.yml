@@ -1,0 +1,25 @@
+
+spring:
+  #mvc“¿¿µ
+       mvc:
+         static-path-pattern: /static/**
+         view:
+           prefix: /WEB-INF/views/
+           suffix: .jsp
+
+  #spring JDBC“¿¿µ
+       datasource:
+         driver-class-name: com.mysql.jdbc.Driver
+         url: jdbc:mysql://localhost:3306/aaaa?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+         username: root
+         password: root
+
+#mybatis“¿¿µ
+mybatis:
+  mapper-locations: classpath:/mybatis/mappers/*.xml
+  config-location: classpath:mybatis-config.xml
+server:
+  port: 8080
+
+
+
